@@ -4,8 +4,11 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    # if the number doesn't have a duplicate return it
+    # remove numbers that appear twice
 
-    pass
+
+    return 
 
 
 if __name__ == '__main__':

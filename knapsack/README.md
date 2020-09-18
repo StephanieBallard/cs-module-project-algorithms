@@ -1,8 +1,16 @@
 # The Knapsack Problem
 
+# Understanding and planning in comments
+
 Suppose you are Indiana Jones, and you have found the secret entrance to the Temple of Doom. Before you is a multitude of artifacts and treasures - pots, gemstones, works of art, and more. These belong in a museum! But there are soldiers hot on your heels, and you can only carry so much...
 
+# *GOAL* - Need to pick what is most important and maximize the size to space ration with the value of the items.
+
 You, brave explorer, are facing the knapsack problem - maximizing the value of a set of items you select that are constrained by total size/weight. The size and the value of an item need not be correlated - the most precious item may be a tiny gemstone. But it turns out it's pretty tricky to get a truly optimal solution, and that a bruteforce approach really doesn't scale.
+
+# We need to sort the items into the bag and need to be within a certain total size/weight
+# The size and value of the items do not need to have a correlation.
+# The first solution typically wont work well if the size of the bag is increased exponentially.
 
 A bit more motivation - this is a very general optimization problem that can be applied in a multitude of situations, from resource selection and allocation to stuffing stolen goods in knapsacks.
 
@@ -10,7 +18,42 @@ A bit more motivation - this is a very general optimization problem that can be 
 
 The specific goal of this exercise is to write a program that takes input files that look like this:
 
-```
+# The func will take in three parameters
+   # Item Number of type Int
+   # The space the item takes up in the back pack of type Int
+   # The profit for saving that item of type Int
+      # Three pieces of data need to be passed into our func and the amount of space left needs to be adjusted and the item number needs to change each time
+      # an item is added into the bag.
+      # The item needs to also be matched up with a profit value of the item added to the bag. Does that total need to be calculated as well?
+         # Use an empty array to keep track of the item number. Add one to the position in the array which will start it at one. The needs to change the entire array making that a O(n) (i think.) 
+            # Does this need to be an array of arrays? Over thinking it?
+            
+         # We need to keep track of the total space in the bag and how much each item is using and how much will be left after it is entered in the bag.
+            # If the amount of the item is greater than the amount of space left in the bag then it cannot fit into the bag
+
+            # What happens if there are no more items left to place in the bag?
+
+          
+          
+          
+# From the provided information in the other file     
+
+def knapsack(size, value):
+   item_number = arr index + 1
+      after each item is in the bag do this to the item number
+            
+Item = namedtuple('Item', ['index', 'size', 'value'])
+
+def knapsack_solver(items, capacity):
+    # Your code here
+
+    pass
+
+# We need to make an array of tuples. 
+# using two functions we will handle our four pieces of data that we need to keep track of.
+
+
+ ```
 1 42 81
 2 42 42
 3 68 56
